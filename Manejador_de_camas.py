@@ -1,4 +1,4 @@
-from Manejador_de_medicamentos import  man
+
 from Cama import cama
 import csv
 class manejador():
@@ -17,14 +17,20 @@ class manejador():
                 self.__arreglo.append(unacama)
         archivo.close()
     def buscar(self,pa):
+        band=False
+        va=None
         for cama in self.__arreglo:
             if str.lower(cama.nom())==str.lower(pa):
+                band=True
                 fecha= input("Ingrese la fecha de alta del paciente")
                 cama.alta(fecha)
                 print (cama)
-                unme=man()
-                va=cama.id()
-                man.buscar(va)
+                va=int (cama.id())
+                #print (type(va))
+        if band==False:
+            print ("Paciente no encotrado\n")
+        else:
+            return va
     def mostrar(self):
         for cam in self.__arreglo:
             print (cam)

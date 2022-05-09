@@ -17,12 +17,21 @@ class man():
                 self.__lista.append(unmedicamento)
         archivo.close()
     def buscar(self,va):
-        print ("Medicamento\monodroga\tPresentacion\tCantidad\tPrecio\n")
-        total=0
-        for i in range (len(self.__lista)):
-            if (self.__lista[i].id==va):
-                total=total+int(self.__lista[i].prec())
-                print ("{}\t{}\t{}\t",self.__lista[i].mono(),self.__lista[i].pre(),self.__lista[i].prec())
+        band =False
+
+        for medicamento in self.__lista:
+            if int(medicamento.id())==va:
+                band=True
+        if band==True:
+            print ("Medicamento\monodroga\tPresentacion\tCantidad\tPrecio\n")
+            total=0
+            for medicamento in  (self.__lista):
+                if int(medicamento.id())==va:
+                    total=total+int(medicamento.prec())
+                    print ("{}".format(medicamento))
+            print ("Total: ${}".format(total))
+        else:
+            print ("medicamento no encontrado")
     def mostrar(self):
-        for med in self.__lista:
-            print (med)
+        for medicamento in self.__lista:
+            print (medicamento)

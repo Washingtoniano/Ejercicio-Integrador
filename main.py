@@ -8,4 +8,5 @@ if __name__ == '__main__':
     unmaneM.mostrar()
     unmaneC.mostrar()
     Nom=input ("Ingrese el nombre del paciente que desea buscar")
-    unmaneC.buscar(Nom)
+    id=unmaneC.buscar(Nom)
+    unmaneM.buscar(id)
