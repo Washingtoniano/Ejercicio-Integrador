@@ -18,10 +18,14 @@ class manejador():
         archivo.close()
     def buscar(self,pa):
         for cama in self.__arreglo:
-            if str.lower(cama.nom())==str(pa):
+            if str.lower(cama.nom())==str.lower(pa):
                 fecha= input("Ingrese la fecha de alta del paciente")
                 cama.alta(fecha)
                 print (cama)
                 unme=man()
-                man.buscar(cama.id)
+                va=cama.id()
+                man.buscar(va)
+    def mostrar(self):
+        for cam in self.__arreglo:
+            print (cam)
 

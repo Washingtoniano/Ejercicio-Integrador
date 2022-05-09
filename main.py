@@ -5,5 +5,7 @@ if __name__ == '__main__':
     unmaneC.leer()
     unmaneM=man()
     unmaneM.leer()
+    unmaneM.mostrar()
+    unmaneC.mostrar()
     Nom=input ("Ingrese el nombre del paciente que desea buscar")
     unmaneC.buscar(Nom)

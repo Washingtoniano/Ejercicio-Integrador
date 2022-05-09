@@ -22,4 +22,6 @@ class med():
         return self.__presentacion
     def prec(self):
         return self.__precio
+    def __str__(self):
+        return("Idcam:{}- idme:{}-Nombre:{}-Mono:{}-Presentacion:{}-Cantidad:{}-Precio:{}".format(self.__idcama,self.__idmed,self.__nombre,self.__monodroga,self.__presentacion,self.__cantidad,self.__precio))
 

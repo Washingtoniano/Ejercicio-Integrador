@@ -23,3 +23,6 @@ class man():
             if (self.__lista[i].id==va):
                 total=total+int(self.__lista[i].prec())
                 print ("{}\t{}\t{}\t",self.__lista[i].mono(),self.__lista[i].pre(),self.__lista[i].prec())
+    def mostrar(self):
+        for med in self.__lista:
+            print (med)
