@@ -27,7 +27,7 @@ class man():
             total=0
             for medicamento in  (self.__lista):
                 if int(medicamento.id())==va:
-                    total=total+int(medicamento.prec())
+                    total=total+(int(medicamento.prec())*int(medicamento.can()))
                     print ("{}".format(medicamento))
             print ("Total: ${}".format(total))
         else:

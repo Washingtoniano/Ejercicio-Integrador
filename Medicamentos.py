@@ -22,6 +22,8 @@ class med():
         return self.__presentacion
     def prec(self):
         return self.__precio
+    def can(self):
+        return self.__cantidad
     def __str__(self):
-        return("Medicamento\monodroga\tPresentacion\tCantidad\tPrecio\n{}\t{}\t{}\t${}\n".format(self.__monodroga,self.__presentacion,self.__cantidad,self.__precio))
+        return("{}\t\t\t{}\t\t\t{}\t\t${}\n".format(self.__monodroga,self.__presentacion,self.__cantidad,self.__precio))
 

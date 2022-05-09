@@ -1,4 +1,3 @@
-import csv
 class cama():
     __idcama=int
     __habitacion=int
